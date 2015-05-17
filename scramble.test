@@ -1,0 +1,50 @@
+Testing unit for scramble.py module.
+
+>>> from scramble import *
+
+==========================================
+        Tests for word scrambler:
+
+>>> test = TextBlock("", "word")
+>>> test.scramble()
+>>> print test
+<BLANKLINE>
+
+>>> test.text = "a"
+>>> test.scramble()
+>>> print test
+a
+
+>>> test.text = "ab"
+>>> test.scramble()
+>>> print test
+ab
+
+>>> test.text = "abc"
+>>> test.scramble()
+>>> print test
+abc
+
+>>> test.text = "abcd"
+>>> test.scramble()
+>>> print test
+acbd
+
+==========================================
+        Tests for text scrambler:
+
+>>> test = TextSplitter("")
+>>> test.scrambleWords()
+>>> print test
+<BLANKLINE>
+
+>>> test = TextSplitter("The result is: 1234", " :0123456789")
+>>> test.scrambleWords()
+>>> print test
+The rluset is: 1234
+
+>>> text = """According to research at Cambridge University, it doesn't matter in what order the letters in a word are, the only important thing is that the first and last letter be at the right place. The rest can be a total mess and you can still read it without a problem. This is because the human mind does not read every letter by itself, but the word as a whole."""
+>>> test = TextSplitter(text)
+>>> test.scrambleWords()
+>>> print test
+Anidroccg to rcraeseh at Cgdirbmae Utisreviny, it dseon't mettar in waht oedrr the lrettes in a wrod are, the olny inatropmt tnihg is taht the fsrit and lsat letter be at the rhgit pcale. The rset can be a tatol mses and you can slitl raed it wuohtit a pelborm. Tihs is bsuacee the hamun mnid deos not raed erevy letter by ilestf, but the wrod as a wlohe.

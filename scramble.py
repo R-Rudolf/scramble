@@ -15,10 +15,26 @@ class TextBlock:
         This function leaves the first and last character in this TextBlock in place,
         but the remaining middle characters will be written back in a reverse order.
 
-        >>> test = TextBlock("alma", "word")
+        >>> test = TextBlock("", "word")
         >>> test.scramble()
         >>> print test
-        amla
+        <BLANKLINE>
+        >>> test.text = "a"
+        >>> test.scramble()
+        >>> print test
+        a
+        >>> test.text = "ab"
+        >>> test.scramble()
+        >>> print test
+        ab
+        >>> test.text = "abc"
+        >>> test.scramble()
+        >>> print test
+        abc
+        >>> test.text = "abcd"
+        >>> test.scramble()
+        >>> print test
+        acbd
         """
         block = self.text
         length = len(block)
@@ -52,6 +68,14 @@ class TextSplitter:
     It can be given, what characters don't represent words.
     The word blocks can be scrambled, to get a special text.
 
+    >>> test = TextSplitter("")
+    >>> test.scrambleWords()
+    >>> print test
+    <BLANKLINE>
+    >>> test = TextSplitter("The result is: 1234", " :0123456789")
+    >>> test.scrambleWords()
+    >>> print test
+    The rluset is: 1234
     >>> test = TextSplitter("According to research at Cambridge University, it doesn't matter in what order the letters in a word are, the only important thing is that the first and last letter be at the right place. The rest can be a total mess and you can still read it without a problem. This is because the human mind does not read every letter by itself, but the word as a whole.")
     >>> test.scrambleWords()
     >>> print test
