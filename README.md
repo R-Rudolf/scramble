@@ -1,8 +1,28 @@
-# Scramble letters exercise
+#Readme for the solution **scramble.py**:
+
+##The solution consists of two Classes:
+
+ - **TextBlock**:
+   - It represents a text sequence
+   - It has a textType variable, to determine its content
+   - It has a *scramble* function as described in the original readme
+   
+ - **TextSplitter**:
+   - It processes an input text: Splits the text into word and not word blocks
+   - It has a *scrambleWords* function which realizes the needed effect described in the original readme
+
+##Running Unit test:
+
+The tests were written using the *doctest* module. Running the **scramble.py** script evaluates the test units of the two classes.
+
+Current tests are written in the source code, but optionally all the tests can be run using the **scramble.test** file. 
+
+#Original readme for task *Scramble letters exercise*:
 
 Can you read the following paragraph?
 
 "Aoccdrnig to rscheearch at Cmabrigde Uinervtisy, it deosn't mttaer in waht oredr the ltteers in a wrod are, the olny iprmoetnt tihng is taht the frist and lsat ltteer be at the rghit pclae. The rset can be a toatl mses and you can sitll raed it wouthit a porbelm. Tihs is bcuseae the huamn mnid deos not raed ervey lteter by istlef, but the wrod as a wlohe." 
+
 
 Let's create something similar that can scramble the words in sentences so that they remain legible. 
 
